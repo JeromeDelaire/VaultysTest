@@ -1,0 +1,21 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.username {
+    display: flex;
+    flex-direction: row;
+}
+
+.fieldName {
+    font-size: medium;
+}

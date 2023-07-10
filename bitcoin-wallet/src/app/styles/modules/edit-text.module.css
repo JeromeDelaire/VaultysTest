@@ -1,0 +1,16 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.label {
+    font-size: medium;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.error {
+    color: red;
+    font-size: small;
+}
