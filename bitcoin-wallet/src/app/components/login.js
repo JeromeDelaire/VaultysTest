@@ -1,12 +1,13 @@
-import {} from "../redux/features/accountSlice";
 import { isEmailValid, isPhoneNumberValid } from "../shared/utils";
 import style from "../styles/modules/login.module.css";
 import EditText from "./edit-text";
-import { createWallet } from "../redux/features/walletSlice";
 import { useAppDispatch } from "../redux/hooks";
+import { useRouter } from "next/navigation";
+import { createWallet } from "../redux/features/walletSlice";
 
 export default function Login() {
   const dispatch = useAppDispatch();
+  const router = useRouter();
 
   return (
     <div className={style.layout}>
@@ -35,7 +36,10 @@ export default function Login() {
       />
       <button
         className={style.createWalletButton}
-        onClick={() => dispatch(createWallet())}
+        onClick={async () => {
+          await dispatch(createWallet());
+          router.push("/wallet");
+        }}
       >
         Save
       </button>
