@@ -1,5 +1,5 @@
 import style from "../styles/modules/navbar.module.css";
-import { AiOutlineAppstore, AiOutlineProfile } from "react-icons/ai";
+import { AiOutlineAppstore, AiOutlineQrcode } from "react-icons/ai";
 import { BsWindow } from "react-icons/bs";
 import { LuSettings2 } from "react-icons/lu";
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
@@ -36,7 +36,7 @@ export default function NavBar() {
         }`}
         onClick={() => dispatch(setCurrentTab(2))}
       >
-        <AiOutlineProfile className={style.tabicon} size={40} />
+        <AiOutlineQrcode className={style.tabicon} size={40} />
         <h1 className={style.tabname}>{WALLET_TABS[2]}</h1>
       </div>
       <div
