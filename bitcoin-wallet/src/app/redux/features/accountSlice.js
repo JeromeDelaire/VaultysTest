@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const globalSlice = createSlice({
+export const accountSlice = createSlice({
   name: "account",
   initialState: {
     firstName: "jerome delaire",
@@ -11,6 +11,6 @@ export const globalSlice = createSlice({
   reducers: {},
 });
 
-export const {} = globalSlice.actions;
+export const {} = accountSlice.actions;
 
-export default globalSlice.reducer;
+export default accountSlice.reducer;

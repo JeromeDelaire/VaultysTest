@@ -1,11 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import accountReducer from "./features/accountSlice";
-// import thunk from "redux-thunk";
+import walletReducer from "./features/walletSlice";
+import thunk from "redux-thunk";
 
 export const store = configureStore({
   reducer: {
     accountReducer,
+    walletReducer,
   },
+  middleware: (getDefaultMiddleware) => [...getDefaultMiddleware(), thunk],
   devTools: process.env.NODE_ENV !== "production",
 });
 

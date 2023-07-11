@@ -19,13 +19,13 @@ export default function EditText({ label, inputType, validate, invalideMsg }) {
 
   return (
     <div className={style.layout}>
-      <label className={style.label}>{label}</label>
       <input
         type={inputType}
         className={`${error && "error"}`}
         value={value}
         onChange={handleInputChange}
         onBlur={handleBlur}
+        placeholder={label}
       ></input>
       {error && <span className={style.error}>{invalideMsg}</span>}
     </div>

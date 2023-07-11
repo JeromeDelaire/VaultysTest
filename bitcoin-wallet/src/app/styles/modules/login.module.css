@@ -1,14 +1,12 @@
 .layout {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     max-width: 400px;
-}
-
-.horizontal {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding-top: 50px;
 }
 
 .username {
@@ -18,4 +16,9 @@
 
 .fieldName {
     font-size: medium;
+}
+
+.createWalletButton {
+    margin-top: 40px;
+    max-width: 200px;
 }
