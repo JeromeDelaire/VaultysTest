@@ -20,7 +20,7 @@ export const createWallet = createAsyncThunk(
 export const walletSlice = createSlice({
   name: "wallet",
   initialState: {
-    address: "1GyWgXtkVG5gsm9Ym1rkHoJHAftmPnTHQj",
+    address: "",
     privateKey: "",
     mnemonic: "",
     status: "idle",
