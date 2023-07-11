@@ -24,8 +24,13 @@ export const walletSlice = createSlice({
     privateKey: "",
     mnemonic: "",
     status: "idle",
+    currentTab: 0,
   },
-  reducers: {},
+  reducers: {
+    setCurrentTab: (state, action) => {
+      state.currentTab = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(createWallet.pending, (state) => {
@@ -45,6 +50,6 @@ export const walletSlice = createSlice({
   },
 });
 
-export const {} = walletSlice.actions;
+export const { setCurrentTab } = walletSlice.actions;
 
 export default walletSlice.reducer;

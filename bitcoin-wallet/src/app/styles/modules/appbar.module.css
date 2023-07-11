@@ -1,0 +1,13 @@
+.layout {
+    display: flex;
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0px;
+    justify-content: center;
+}
+
+.tabname {
+    color: white;
+}
