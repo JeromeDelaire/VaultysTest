@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,5 +24,8 @@
     "react-icons": "^4.10.1",
     "react-redux": "^8.1.1",
     "tiny-secp256k1": "^2.2.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
