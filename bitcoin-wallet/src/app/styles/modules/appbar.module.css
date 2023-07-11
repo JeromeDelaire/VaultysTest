@@ -13,3 +13,9 @@
 .tabname {
     color: white;
 }
+
+.exit {
+    position: absolute;
+    color: white;
+    right: 20px;
+}

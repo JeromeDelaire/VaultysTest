@@ -14,12 +14,16 @@ export default function Wallet() {
   const walletAddress = useAppSelector((state) => state.walletReducer.address);
   const [qrCodeDataURL, setQRCodeDataURL] = useState("");
 
-  useEffect(async () => {
+  useEffect(() => {
+    generateQRCode();
+  }, [walletAddress]);
+
+  async function generateQRCode() {
     if (walletAddress) {
       const qrCodeDataURL = await QRCode.toDataURL(walletAddress);
       setQRCodeDataURL(qrCodeDataURL);
     }
-  }, [walletAddress]);
+  }
 
   function TabContent() {
     switch (currentTab) {
